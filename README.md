@@ -1,20 +1,57 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+  <h1>🛡️ NeuralVerify</h1>
+  <h3>Enterprise-Grade AI Deepfake Detection System</h3>
+
+  <p>
+    <strong>Detects Flux.1, Midjourney v6, Stable Diffusion, and GANs with 85%+ Accuracy.</strong>
+  </p>
+
+  <p>
+    <a href="https://ai-real-neural.vercel.app"><strong>🔴 Live Demo</strong></a> •
+    <a href="#-tech-stack"><strong>🛠️ Tech Stack</strong></a> •
+    <a href="#-architecture"><strong>🏗️ Architecture</strong></a> •
+    <a href="#-model-performance"><strong>📊 Benchmarks</strong></a>
+  </p>
+
+  <!-- Add badges for "Wow" factor -->
+  <img src="https://img.shields.io/badge/Model-EfficientNetV2-blue?style=for-the-badge&logo=tensorflow" alt="Model" />
+  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi" alt="Backend" />
+  <img src="https://img.shields.io/badge/Frontend-React_Vite-61DAFB?style=for-the-badge&logo=react" alt="Frontend" />
+  <img src="https://img.shields.io/badge/Deploy-Docker-2496ED?style=for-the-badge&logo=docker" alt="Docker" />
+
 </div>
 
-# Run and deploy your AI Studio app
+<br />
 
-This contains everything you need to run your app locally.
+<!-- PLACEHOLDER FOR YOUR UI SCREENSHOT -->
+<!-- Upload a screenshot of your Vercel app to your repo and link it here -->
+![Dashboard Preview](https://via.placeholder.com/1200x600?text=Upload+Your+App+Screenshot+Here)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1YaeApZkGhoan4Wmd5g8zCHNZMX7c1lNm
+---
 
-## Run Locally
+## 💡 What is NeuralVerify?
 
-**Prerequisites:**  Node.js
+**NeuralVerify** is a full-stack AI forensic tool designed to combat misinformation. Unlike generic classifiers, this system is engineered to detect the specific "mathematical fingerprints" left by modern Latent Diffusion Models (LDMs) and Transformers.
 
+It utilizes a **Microservices Architecture**, decoupling the heavy Neural Network inference (Python/Docker) from the client-facing application (React/Edge).
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### ✨ Key Features
+*   **Multi-Engine Detection:** Specifically trained to spot artifacts from **Flux.1**, **Midjourney**, **Stable Diffusion**, and **StyleGAN**.
+*   **Confidence Thresholding:** The UI flags "Inconclusive" results (40-60% confidence) to prevent false accusations.
+*   **High-Res Analysis:** Optimized for 224x224 resolution to analyze skin texture and high-frequency noise.
+*   **Zero-Shot Robustness:** Includes Gaussian Noise injection during training to simulate camera ISO grain.
+
+---
+
+## 🏗️ Architecture
+
+The system operates on a decoupled **Client-Server** model to ensure scalability.
+
+```mermaid
+graph LR
+  A[User Client] -->|Upload Image| B(React + Vite Frontend)
+  B -->|HTTPS Request| C{Hugging Face Space}
+  C -->|Docker Container| D[FastAPI Server]
+  D -->|Inference| E[EfficientNetV2 Model]
+  E -->|Prediction JSON| B
