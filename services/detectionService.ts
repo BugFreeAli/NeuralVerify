@@ -32,7 +32,7 @@ export const analyzeImage = async (
   // 🟢 STEP 1: PASTE YOUR HUGGING FACE URL HERE
   // =========================================================================
   
-  const HUGGING_FACE_URL = "https://huggingface.co/spaces/BugFreeAli/ai_real_detection";
+  const HUGGING_FACE_URL = "https://bugfreeali-ai-real-detection.hf.space/predict";
   
   // =========================================================================
 
