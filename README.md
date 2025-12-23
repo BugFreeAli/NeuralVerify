@@ -25,7 +25,7 @@
 <br />
 
 <!-- ⚠️ REPLACE THIS URL WITH A SCREENSHOT OF YOUR BEAUTIFUL UI -->
-![Dashboard Screenshot]<img src="https://github.com/user-attachments/assets/1bf41fe4-79b3-4174-a2e0-5f10d2a1bb20" width="700" />
+<img src="https://github.com/user-attachments/assets/81dac666-cb50-4089-964c-3935f27e677c" alt="Dashboard Screenshot" width="100%" />
 
 ---
 
