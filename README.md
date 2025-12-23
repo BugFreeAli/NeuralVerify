@@ -8,7 +8,7 @@
   </p>
 
   <p>
-    <a href="https://ai-real-neural.vercel.app"><strong>🔴 Live Demo</strong></a> •
+    <a href="https://real-neural.vercel.app/"><strong>🔴 Live Demo</strong></a> •
     <a href="#-features"><strong>✨ Features</strong></a> •
     <a href="#-tech-stack"><strong>🛠️ Tech Stack</strong></a>
   </p>
@@ -25,7 +25,7 @@
 <br />
 
 <!-- ⚠️ REPLACE THIS URL WITH A SCREENSHOT OF YOUR BEAUTIFUL UI -->
-![Dashboard Screenshot](<img src="https://github.com/user-attachments/assets/124f3529-fc00-435a-916a-2c503d7f308d" width="700" />)
+![Dashboard Screenshot]<img src="https://github.com/user-attachments/assets/124f3529-fc00-435a-916a-2c503d7f308d" width="700" />
 
 ---
 
